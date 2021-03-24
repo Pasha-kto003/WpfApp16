@@ -33,7 +33,7 @@ namespace WpfApp16
         }
         internal void CreateStudent()
         {
-            SelectedStudent = studentControl.CreateStudent(SelectedStudent);
+            SelectedStudent = studentControl.CreateStudent();
             PageContainer.ChangePageTo(PageType.StudentList);
             StudentsChanged?.Invoke(this, null);
         }

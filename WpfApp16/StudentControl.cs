@@ -14,14 +14,14 @@ namespace WpfApp16
             Students.Add(new Student { Name = "Andrew", FatherName="Pakovski", LastName="Woods", Address = "Warsaw Poland" });
         }
         
-        internal void EditStudent( )
+        internal void EditStudent()
         {
             
         }
 
-        internal Student CreateStudent(Student student)
+        internal Student CreateStudent()
         {
-            Student newStudent = new Student { Name = "Alex", FatherName= "Pakovski", LastName= "Pakovski", Address = "Warsaw Poland" };
+            Student newStudent = new Student(); /*{ Name = "Alex", FatherName= "Pakovski", LastName= "Pakovski", Address = "Warsaw Poland" };*/
             Students.Add(newStudent);
             return newStudent;
         }
