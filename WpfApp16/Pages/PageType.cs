@@ -8,6 +8,7 @@ namespace WpfApp16
     {
         StudentList,
         StudentCreate,
-        GroupList
+        GroupList,
+        EditStudent
     }
 }

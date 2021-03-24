@@ -13,7 +13,13 @@ namespace WpfApp16
         {
             Students.Add(new Student { Name = "Andrew", FatherName="Pakovski", LastName="Woods", Address = "Warsaw Poland" });
         }
-        
+
+        //public void OpenGroupList()
+        //{
+        //    PageContainer.ChangePageTo(PageType.GroupList);
+
+        //}
+
         internal void EditStudent()
         {
             
