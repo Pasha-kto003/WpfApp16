@@ -1,0 +1,24 @@
+﻿<Page x:Class="WpfApp16.StudentCreate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp16"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" d:Background="White"
+      Title="StudentCreate">
+    <Grid>
+        <StackPanel Orientation="Vertical" Grid.Column="0" DataContext="{Binding SelectedStudent}">
+            <TextBlock Text="ФИО" TextAlignment="Center"/>
+            <TextBox Text="{Binding Name}"/>
+            <TextBlock Text="Адрес" TextAlignment="Center"/>
+            <TextBox Text="{Binding Address}"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Grid.Column="1" Height="20" Width="150" Content="Редактировать" Command="{Binding EditStudent}"/>
+                <Button Grid.Column="1" Height="20" Width="150" Content="Добавить студента" Command="{Binding CreateStudent}"/>
+            <Button Grid.Column="1" Height="20" Width="150" Content="Назад" Command="{Binding Back}"/>
+        </StackPanel>
+ 
+    </Grid>
+</Page>

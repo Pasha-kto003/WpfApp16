@@ -1,0 +1,41 @@
+﻿<Page x:Class="WpfApp16.StudentList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp16"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StudentList">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Группы"  Command="{Binding OpenGroupList}">
+                <MenuItem Header="Htlfrnbhjdf" />
+                <MenuItem/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
+            <TextBlock Text="Выбранная группа:"/>
+            <ComboBox DisplayMemberPath="Number" ItemsSource="{Binding Groups}" SelectedItem="{Binding Groups}" x:Name="comb1"/>
+        </StackPanel>
+        <ListView Grid.Row="2" ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ФИО" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Адрес" DisplayMemberBinding="{Binding Address}" />
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Редактировать" Command="{Binding StudentCreate}" CommandParameter="{Binding SelectedStudent}"/>
+                    <MenuItem Header="Удалить" Command="{Binding DeleteStudent}" CommandParameter="{Binding SelectedStudent}"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+    </Grid>
+</Page>
