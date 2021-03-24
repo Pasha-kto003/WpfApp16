@@ -7,6 +7,11 @@ namespace WpfApp16
 {
     class GroupListVM : MvvmNotify, IPage
     {
+        public void OpenGroupList()
+        {
+            
+        }
+
         Model model;
         List<Group> Groups = new List<Group>
         {

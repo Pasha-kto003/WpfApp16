@@ -22,7 +22,7 @@ namespace WpfApp16
 
         public Group Group { get; set; }
         public MvvmCommand StudentCreate { get; set; }
-        public MvvmCommand DeleteStudent { get; set; }
+        public MvvmCommand RemoveStudent { get; set; }
         public MvvmCommand OpenGroupList { get; set; }
         public void SetModel(Model model)
         {
@@ -33,7 +33,7 @@ namespace WpfApp16
             OpenGroupList = new MvvmCommand(
            () => model.OpenGroupList()
                , () => true);
-            DeleteStudent = new MvvmCommand(
+            RemoveStudent = new MvvmCommand(
            () => model.RemoveStudent()
                , () => true);
             StudentCreate = new MvvmCommand(

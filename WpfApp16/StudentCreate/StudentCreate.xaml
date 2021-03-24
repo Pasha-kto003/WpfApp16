@@ -9,8 +9,12 @@
       Title="StudentCreate">
     <Grid>
         <StackPanel Orientation="Vertical" Grid.Column="0" DataContext="{Binding SelectedStudent}">
-            <TextBlock Text="ФИО" TextAlignment="Center"/>
-            <TextBox Text="{Binding Name}"/>
+            <TextBlock Text="Имя" TextAlignment="Center"/>
+            <TextBox Text="{Binding Name}" TextAlignment="Center"/>
+            <TextBlock Text="Фамилия"/>
+            <TextBox Text="{Binding LastName}" TextAlignment="Center"/>
+            <TextBlock Text="Отчество"/>
+            <TextBox Text="{Binding FatherName}" TextAlignment="Center"/>
             <TextBlock Text="Адрес" TextAlignment="Center"/>
             <TextBox Text="{Binding Address}"/>
         </StackPanel>

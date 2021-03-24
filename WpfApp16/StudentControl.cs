@@ -11,7 +11,7 @@ namespace WpfApp16
         
         public StudentControl()
         {
-            Students.Add(new Student { Name = "Andrew", FatherName="Pakovski", Address = "Warsaw Poland" });
+            Students.Add(new Student { Name = "Andrew", FatherName="Pakovski", LastName="Woods", Address = "Warsaw Poland" });
         }
         
         internal void EditStudent( )
@@ -21,7 +21,7 @@ namespace WpfApp16
 
         internal Student CreateStudent(Student student)
         {
-            Student newStudent =new Student { Name = "Alex", Address = "Warsaw Poland", FatherName= "Pakovski", LastName= "Pakovski" };
+            Student newStudent = new Student { Name = "Alex", FatherName= "Pakovski", LastName= "Pakovski", Address = "Warsaw Poland" };
             Students.Add(newStudent);
             return newStudent;
         }

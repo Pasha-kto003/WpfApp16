@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Menu>
             <MenuItem Header="Группы"  Command="{Binding OpenGroupList}">
-                <MenuItem Header="Htlfrnbhjdf" />
+                <MenuItem Header="Редактировать" />
                 <MenuItem/>
             </MenuItem>
         </Menu>
@@ -26,14 +26,16 @@
         <ListView Grid.Row="2" ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ФИО" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding FatherName}"/>
                     <GridViewColumn Header="Адрес" DisplayMemberBinding="{Binding Address}" />
                 </GridView>
             </ListView.View>
             <ListView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Редактировать" Command="{Binding StudentCreate}" CommandParameter="{Binding SelectedStudent}"/>
-                    <MenuItem Header="Удалить" Command="{Binding DeleteStudent}" CommandParameter="{Binding SelectedStudent}"/>
+                    <MenuItem Header="Удалить" Command="{Binding RemoveStudent}" CommandParameter="{Binding SelectedStudent}"/>
                 </ContextMenu>
             </ListView.ContextMenu>
         </ListView>
